@@ -1,0 +1,47 @@
+.splash{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: #242424;
+}
+.splash.active{
+    bottom: 0;
+    opacity: 1;
+}
+.splash.inactive{
+    bottom: 150px;
+    opacity: 0;
+}
+.splashBtn{
+    padding: 10px 20px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.imgHeart{
+    position: absolute;
+    top: 150px;
+    left: 270px;
+    pointer-events: none;
+    opacity: 0;
+}
+.imgHeart.active{
+    animation-name: fade;
+    animation-duration: 0.5s;
+}
+.imgHeart.inactive{
+    animation-name: fade;
+    animation-duration: 1s;
+}
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
