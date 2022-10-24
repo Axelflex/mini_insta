@@ -99,7 +99,7 @@ const post = {
     userId: user.userId,
     identity: user.email,
     name: "post name",
-    photo: "/123.jpeg",
+    photo: "../img/img.png",
     description: "lorem",
     likes: 12,
     likeState: false,
