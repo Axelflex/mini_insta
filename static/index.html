@@ -11,7 +11,7 @@
 <div class="splash">
     <button class="splashBtn" id="splashBtn">Log in</button>
 </div>
-<div class="container">
+<div class="app-container container">
     <!-- add post -->
     <div class="d-flex justify-content-center">
 
@@ -23,68 +23,27 @@
 
         <div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" aria-hidden="true">
             <div class="modal-dialog">
-                <div class="modal-content">
+                <form class="modal-content" id="addPostForm">
                     <div class="modal-header">
                         <h1 class="modal-title fs-5" id="postModalLabel">Add new post</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form class="d-flex flex-column" id="post-form">
-                            <input class="btn btn-secondary mb-2" type="file" name="attachment">
+                        <div class="d-flex flex-column" id="post-form">
+                            <input class="btn btn-secondary mb-2" type="file" name="newPostAttachment">
                             <textarea placeholder="description" name="description"></textarea>
                             <input type="hidden" name="userId"  value="1">
-                        </form>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Create</button>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
     <!-- post -->
-    <div class="container d-flex justify-content-center flex-wrap" style="width: 40rem;">
-        <div class="card mb-3" style="width: 40rem;">
-            <img src="../img/img.png" class="card-img-top" id="postImg" alt="...">
-            <span class="h1 mx-2 text-danger imgHeart hide" id="iconOnImg">
-                <i class="bi bi-heart-fill"></i>
-            </span>
-            <div class="card-body d-flex">
-                <span class="h1 mx-2 text-danger">
-                    <i class="bi bi-heart" id="heart"></i>
-                </span>
-
-                <span class="h1 mx-2" data-bs-toggle="modal" data-bs-target="#commentModal">
-                    <i class="bi bi-chat"></i>
-                </span>
-
-                <span class="h1 mx-2 ms-auto ">
-                    <i class="bi bi-bookmark" id="mark"></i>
-                </span>
-            </div>
-        </div>
-
-        <div class="modal fade" id="commentModal" tabindex="-1" aria-labelledby="commentModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="commentModalLabel">Write new comment</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form class="d-flex flex-column" id="comment-form">
-                            <textarea placeholder="description" name="description"></textarea>
-                            <input type="hidden" name="userId"  value="1">
-                            <input type="hidden" name="postId"  value="1">
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Comment</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="post-container container d-flex justify-content-center flex-wrap" style="width: 40rem;"></div>
 </div>
 
 </body>

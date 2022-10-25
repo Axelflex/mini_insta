@@ -2,18 +2,17 @@
     position: fixed;
     z-index: 1;
     left: 0;
-    top: 0;
+    top: -150vh;
     width: 100%;
     height: 100vh;
     background: #242424;
-}
-.splash.active{
-    bottom: 0;
-    opacity: 1;
-}
-.splash.inactive{
     bottom: 150px;
     opacity: 0;
+}
+.splash.active{
+    top: 0;
+    bottom: 0;
+    opacity: 1;
 }
 .splashBtn{
     padding: 10px 20px;
@@ -31,13 +30,16 @@
 }
 .imgHeart.active{
     animation-name: fade;
-    animation-duration: 0.5s;
+    animation-duration: 1.5s;
 }
 @keyframes fade {
     0%{
         opacity: 0;
     }
-    100%{
+    40%{
         opacity: 1;
+    }
+    100%{
+        opacity: 0;
     }
 }
